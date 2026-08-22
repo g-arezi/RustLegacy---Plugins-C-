@@ -108,10 +108,6 @@ Reinicia o servidor automaticamente em intervalos fixos.
    - Envia um aviso `@everyone` para um webhook do Discord.
 2. Após 60 segundos, executa `quit`, encerrando o processo do servidor (deve ser reiniciado por um script/serviço externo, ex.: um restart automático do host).
 
-### ⚠️ Aviso de segurança
-A URL do webhook do Discord está **fixa diretamente no código-fonte** (`CordSupport`), diferente dos outros plugins desta pasta que usam arquivo de configuração. Isso expõe a URL a qualquer pessoa com acesso ao arquivo `.cs`. Recomenda-se:
-- Mover a URL para um arquivo de configuração (`oxide/config/AutoRestart.json`), como feito em `DiscordLogs.cs`/`KillFeed.cs`.
-- Revogar/recriar o webhook atual no Discord, já que a URL já esteve exposta no código.
 
 ### Configuração
 Não possui arquivo de configuração — os valores (`AutoRestart`, `SystemName`, `CordSupport`) estão fixos no código e exigem recompilar o plugin para alterar.
